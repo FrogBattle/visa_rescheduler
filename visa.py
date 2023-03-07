@@ -26,7 +26,7 @@ USERNAME = config['USVISA']['USERNAME']
 PASSWORD = config['USVISA']['PASSWORD']
 SCHEDULE_ID = config['USVISA']['SCHEDULE_ID']
 MY_SCHEDULE_DATE = config['USVISA']['MY_SCHEDULE_DATE']
-COUNTRY_CODE = config['USVISA']['COUNTRY_CODE'] 
+COUNTRY_CODE = config['USVISA']['COUNTRY_CODE']
 FACILITY_ID = config['USVISA']['FACILITY_ID']
 
 SENDGRID_API_KEY = config['SENDGRID']['SENDGRID_API_KEY']
@@ -36,7 +36,7 @@ PUSH_USER = config['PUSHOVER']['PUSH_USER']
 LOCAL_USE = config['CHROMEDRIVER'].getboolean('LOCAL_USE')
 HUB_ADDRESS = config['CHROMEDRIVER']['HUB_ADDRESS']
 
-REGEX_CONTINUE = "//a[contains(text(),'Continuar')]"
+REGEX_CONTINUE = "//a[contains(text(),'Continue')]"
 
 
 # def MY_CONDITION(month, day): return int(month) == 11 and int(day) >= 5
@@ -58,8 +58,8 @@ def send_notification(msg):
 
     if SENDGRID_API_KEY:
         message = Mail(
-            from_email=USERNAME,
-            to_emails=USERNAME,
+            from_email='leonsashkoo@gmail.com',
+            to_emails='alexander.sim@yahoo.com',
             subject=msg,
             html_content=msg)
         try:

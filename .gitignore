@@ -1,1 +1,4 @@
 config.ini
+sendgrid.env
+venv/*
+sendgrid.env
